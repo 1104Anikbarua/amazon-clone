@@ -1,0 +1,38 @@
+:root {
+    --font-color: #0E161A;
+    --font-color-secondary: #2A414F;
+    --font-color-tertiary: #0E161A;
+    --border-color: #95A0A7;
+    --background-color: #FFE0B3;
+    --background-color-secondary: #FF3030;
+    --background-color-tertiary: #FF9900;
+    --font-weight: 400;
+}
+
+.shop-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 82px;
+    margin: 120px 50px 0px 50px;
+    position: relative;
+
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.cart-container {
+    position: sticky;
+    top: 100px;
+    width: 264px;
+    background-color: #FF99004D;
+    height: 100vh;
+
+}
+
+.cart-container h3 {
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+:root {
+    --font-color: #0E161A;
+    --font-color-secondary: #2A414F;
+    --font-color-tertiary: #0E161A;
+    --border-color: #95A0A7;
+    --background-color: #FFE0B3;
+    --background-color-secondary: #FF3030;
+    --background-color-tertiary: #FF9900;
+    --font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    margin-left: 24px;
+    font-weight: 400;
+    color: var(--font-color-secondary);
+}
+
+p:nth-child(5) {
+    font-size: 20px;
+    color: var(--font-color-tertiary);
+    font-weight: 400;
+}
