@@ -46,7 +46,7 @@ const Shop = () => {
             </InfiniteScroll>
 
             <div className='cart-container'>
-                <h3>Order summary</h3>
+
                 <CartDetail cart={cart}></CartDetail>
             </div>
         </div>
