@@ -1,5 +1,10 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Header from './Components/Header/Header'
+import Inventory from './Components/Inventory/Inventory'
+import Main from './Components/Layout/Main'
+import Login from './Components/Login/Login'
+import Orders from './Components/Orders/Orders'
 import Shop from './Components/Shop/Shop'
 
 function App() {
@@ -13,11 +18,32 @@ function App() {
   // ]
   // const total = items.reduce((prev, curr) => prev + curr.price, 0)
   // console.log(total)
+  const router = createBrowserRouter([
+    {
+      path: '/', element: <Main></Main>, children: [
+        {
+          path: '/', element: <Shop></Shop>
+        },
+        {
+          path: 'shop', element: <Shop></Shop>
+        },
+        {
+          path: 'orders', element: <Orders></Orders>
+        },
+        {
+          path: 'inventory', element: <Inventory></Inventory>
+        },
+        {
+          path: 'login', element: <Login></Login>
+        }
+      ]
+    },
+
+  ])
   return (
-    <>
-      <Header></Header>
-      <Shop></Shop>
-    </>
+    <RouterProvider router={router}>
+
+    </RouterProvider>
   )
 }
 
