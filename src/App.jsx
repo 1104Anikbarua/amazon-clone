@@ -6,6 +6,7 @@ import Main from './Components/Layout/Main'
 import Login from './Components/Login/Login'
 import Orders from './Components/Orders/Orders'
 import Shop from './Components/Shop/Shop'
+import loaderData from './LoaderData/LoaderData'
 
 function App() {
   // const number = [10, 20, 30, 40, 50, 60];
@@ -28,7 +29,9 @@ function App() {
           path: 'shop', element: <Shop></Shop>
         },
         {
-          path: 'orders', element: <Orders></Orders>
+          path: 'orders',
+          element: <Orders></Orders>,
+          loader: loaderData
         },
         {
           path: 'inventory', element: <Inventory></Inventory>
