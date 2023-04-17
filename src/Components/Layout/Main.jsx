@@ -6,7 +6,9 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Outlet></Outlet>
+            <div style={{ marginTop: '82px' }}>
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };

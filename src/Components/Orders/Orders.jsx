@@ -8,7 +8,7 @@ import './Order.css'
 const Orders = () => {
     const products = useLoaderData();
     const [cart, setCart] = useState(products);
-    console.log('====>', cart)
+    // console.log('====>', cart)
     const handleRemoveSelected = (id) => {
         // console.log(id)
         const remaining = cart.filter(product => product.id !== id)

@@ -7,6 +7,8 @@ import Login from './Components/Login/Login'
 import Orders from './Components/Orders/Orders'
 import Shop from './Components/Shop/Shop'
 import loaderData from './LoaderData/LoaderData'
+import AuthProvider from './Components/AuthProvider/AuthProvider'
+import Register from './Components/Register/Register'
 
 function App() {
   // const number = [10, 20, 30, 40, 50, 60];
@@ -37,16 +39,22 @@ function App() {
           path: 'inventory', element: <Inventory></Inventory>
         },
         {
-          path: 'login', element: <Login></Login>
+          path: 'register',
+          element: <Register></Register>
+        },
+        {
+          path: 'login',
+          element: <Login></Login>
         }
       ]
     },
 
   ])
   return (
-    <RouterProvider router={router}>
-
-    </RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}>
+      </RouterProvider>
+    </AuthProvider>
   )
 }
 
