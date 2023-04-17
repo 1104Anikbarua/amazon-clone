@@ -3,11 +3,11 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
 
 const RequireAuth = ({ children }) => {
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
     const location = useLocation();
 
-    if (!user) {
-        return <p>Loading</p>
+    if (loading) {
+        return <p style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', height: "100vh" }}>Loading...</p>
     }
 
     if (user) {
