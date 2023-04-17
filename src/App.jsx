@@ -9,6 +9,7 @@ import Shop from './Components/Shop/Shop'
 import loaderData from './LoaderData/LoaderData'
 import AuthProvider from './Components/AuthProvider/AuthProvider'
 import Register from './Components/Register/Register'
+import RequireAuth from './Components/RequireAuth/RequireAuth'
 
 function App() {
   // const number = [10, 20, 30, 40, 50, 60];
@@ -32,7 +33,9 @@ function App() {
         },
         {
           path: 'orders',
-          element: <Orders></Orders>,
+          element: <RequireAuth>
+            <Orders></Orders>
+          </RequireAuth>,
           loader: loaderData
         },
         {
