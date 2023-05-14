@@ -12,7 +12,7 @@ const Shop = () => {
     // console.log(cart)
     // load product from json 
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
@@ -23,7 +23,7 @@ const Shop = () => {
         let storedProduct = [];
         for (const id in storedCart) {
             // console.log(id)
-            const productFound = products.find((product) => product.id === id);
+            const productFound = products.find((product) => product._id === id);
             // console.log(productFound)
             if (productFound) {
                 const quantity = storedCart[id];
@@ -38,7 +38,7 @@ const Shop = () => {
     // add product and store in cart 
     const handleAddToCart = (product) => {
         setCart([...cart, product])
-        addToDb(product.id);
+        addToDb(product._id);
     }
     // const fetchMoreData = () => {
     //     setTimeout(() => {

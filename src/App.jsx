@@ -1,6 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Header from './Components/Header/Header'
 import Inventory from './Components/Inventory/Inventory'
 import Main from './Components/Layout/Main'
 import Login from './Components/Login/Login'
@@ -24,7 +23,8 @@ function App() {
   // console.log(total)
   const router = createBrowserRouter([
     {
-      path: '/', element: <Main></Main>, children: [
+      path: '/', element: <Main></Main>,
+      children: [
         {
           path: '/', element: <Shop></Shop>
         },
@@ -39,7 +39,8 @@ function App() {
           loader: loaderData
         },
         {
-          path: 'inventory', element: <Inventory></Inventory>
+          path: 'inventory',
+          element: <Inventory></Inventory>
         },
         {
           path: 'register',

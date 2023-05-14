@@ -11,7 +11,7 @@ const Orders = () => {
     // console.log('====>', cart)
     const handleRemoveSelected = (id) => {
         // console.log(id)
-        const remaining = cart.filter(product => product.id !== id)
+        const remaining = cart.filter(product => product._id !== id)
         removeFromDb(id)
         setCart(remaining)
     }
@@ -23,7 +23,7 @@ const Orders = () => {
                         return <SelectedProduct
                             handleRemoveSelected={handleRemoveSelected}
                             product={product}
-                            key={product.id}></SelectedProduct>
+                            key={product._id}></SelectedProduct>
                     })
                 }
             </div>

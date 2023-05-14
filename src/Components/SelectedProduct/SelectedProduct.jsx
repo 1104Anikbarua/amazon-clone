@@ -6,7 +6,7 @@ import './SelectedProduct.css';
 const SelectedProduct = (props) => {
     const { product, handleRemoveSelected } = props;
     // console.log(product)
-    const { id, img, name, price, shipping } = product;
+    const { _id, img, name, price, shipping } = product;
     return (
         <div className='selected-product'>
             <img src={img} alt="selected product image" />
@@ -19,7 +19,7 @@ const SelectedProduct = (props) => {
                     <span> ${shipping}</span>
                 </p>
             </div>
-            <button onClick={() => handleRemoveSelected(id)}>
+            <button onClick={() => handleRemoveSelected(_id)}>
                 <FontAwesomeIcon icon={faTrashCan} beat></FontAwesomeIcon></button>
         </div>
     );
